@@ -1,4 +1,4 @@
-let x = truej
+let x = true;
 let typeX = (typeof (x));
 console.log(typeX);
 switch (typeX) {

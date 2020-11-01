@@ -17,3 +17,6 @@ let check = arr.map(function(item) {
 });
 let condition = el => el === true;
 console.log(check.every(condition));
+
+
+// Отличные решения :) особенно интересный вариант для числовых данных, ещё ни у кого не видела такой вариант решения)
