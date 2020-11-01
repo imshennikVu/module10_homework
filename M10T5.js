@@ -1,7 +1,7 @@
 // решение 1
 let arr = [1, 3, 5, 6, 78];
 console.log(arr.length);
-for (var i = 0; i < arr.length; i++) {
+for (let i = 0; i < arr.length; i++) {
 console.log(arr[i]);
 }
 
@@ -11,3 +11,5 @@ console.log(arr.length);
 arr.forEach(function(item, index, array) {
   console.log(item);
 });
+
+// Оба решения верные. Только старайтесь не использовать ключевое слово var при объявлении переменных, это устаревший синтаксис. Для подавляющего большинства случаев лучше использовать более современные операторы - let или const

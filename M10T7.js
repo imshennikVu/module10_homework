@@ -47,3 +47,24 @@ for (let k = 0; k < arrTxt.length; k++) {
 for (let f = 0; f < arrRes.length; f++) {
   console.log(arrTxt[f] + arrRes[f])
 }
+
+// Здесь вы сильно усложнили :) задача решается намного проще. Кроме того, в вашем варианте решения не верно учитываются некоторые значения, например, числа, записанные строкой ("45"), true, false, undefined и т.д. Отдельно нужно было считать нулевые элементы, т.е. нули, не значения null. Все ненужные (нечисловые) значения можно отсеять всего 2-мя проверками: на typeof === "number" и NaN. Всё остальное, кроме чисел, можно просто не обрабатывать. Ниже более простой и правильный вариант решения:
+
+let array = [5, 4, 'fgh' , 1, 3, null, 8, '@', 5, 'gh', 0, '88', true, false, NaN, undefined, {}];
+let even = 0, odd = 0, zero = 0;
+
+array.forEach(element => {
+  if (typeof element === "number" && !isNaN(element)) {
+    if (element === 0) {
+      zero++;
+    } else if (element % 2 === 0) {
+      even++;
+    } else {
+      odd++;
+    }
+  }
+});
+
+console.log(`Четных элементов - ${even}`);
+console.log(`Нечетных элементов - ${odd}`);
+console.log(`Нулей - ${zero}`);
